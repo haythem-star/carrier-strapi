@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "model": "company"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Transportation",
+        "Lifting",
+        "Cooling"
+      ]
+    },
+    "unitPrice": {
+      "type": "decimal"
+    },
+    "unitType": {
+      "type": "enumeration",
+      "enum": [
+        "Kilometer",
+        "Object",
+        "Volume"
+      ]
+    }
+  }
+}

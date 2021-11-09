@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trucks",
+  "info": {
+    "name": "Truck",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registrationNumber": {
+      "type": "string"
+    },
+    "Constructor": {
+      "type": "string",
+      "required": true
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "string"
+    },
+    "photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "company": {
+      "model": "company",
+      "via": "trucks"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "size": {
+      "type": "integer"
+    }
+  }
+}
